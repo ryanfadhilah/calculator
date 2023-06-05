@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid lightgray;
+    /* background-color: white; */
+    transition: all ease-in-out .1s;
+    /* outline: none; */
+}
+
+.calculator-grid>button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(57, 57, 57);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: xx-large;
+}
+
+.output>.previous-operand {
+    color: rgb(188, 188, 188);
+    font-size: medium;
+}
+
+.orange-black {
+    background-color: orange;
+    color: black;
+}
+
+.orange-black:hover {
+    background-color: orangered;
+}
+
+.red-black {
+    /* background-color: orangered; */
+
+}
